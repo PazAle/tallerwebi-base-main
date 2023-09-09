@@ -1,10 +1,15 @@
+com\tallerwebi\dominio\RepositorioLibro.class
 com\tallerwebi\config\DatabaseInitializationConfig.class
+com\tallerwebi\dominio\ServicioLibro.class
 com\tallerwebi\dominio\ServicioLoginImpl.class
 com\tallerwebi\dominio\ServicioLogin.class
+com\tallerwebi\dominio\Libro.class
 com\tallerwebi\MyServletInitializer.class
 com\tallerwebi\presentacion\DatosLogin.class
 com\tallerwebi\dominio\excepcion\UsuarioExistente.class
+com\tallerwebi\dominio\ServicioLibroImpl.class
 com\tallerwebi\config\SpringWebConfig.class
+com\tallerwebi\infraestructura\RepositorioLibroImpl.class
 com\tallerwebi\config\HibernateConfig.class
 com\tallerwebi\presentacion\ControladorLogin.class
 com\tallerwebi\dominio\RepositorioUsuario.class
