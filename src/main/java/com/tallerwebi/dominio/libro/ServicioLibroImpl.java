@@ -1,14 +1,11 @@
-package com.tallerwebi.dominio.Libro;
+package com.tallerwebi.dominio.libro;
 
-import com.tallerwebi.dominio.Libro.ServicioLibro;
 import com.tallerwebi.infraestructura.RepositorioLibro;
-import com.tallerwebi.infraestructura.RepositorioLibroImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-import java.util.List;
 @Service
 public class ServicioLibroImpl implements ServicioLibro {
 
@@ -24,7 +21,9 @@ public class ServicioLibroImpl implements ServicioLibro {
     }
 
     @Override
-    public Libro getLibro(Integer id) {
+    public Libro getLibro(Long id) {
         return repositorioLibro.getLibro(id);
     }
+
+
 }

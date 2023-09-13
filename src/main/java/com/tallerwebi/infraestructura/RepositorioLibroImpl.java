@@ -1,6 +1,6 @@
 package com.tallerwebi.infraestructura;
 
-import com.tallerwebi.dominio.Libro.Libro;
+import com.tallerwebi.dominio.libro.Libro;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
@@ -16,7 +16,7 @@ public class RepositorioLibroImpl implements RepositorioLibro {
     }
 
     @Override
-    public Libro getLibro(Integer id) {
+    public Libro getLibro(Long id) {
         return new Libro(id);
     }
 }
