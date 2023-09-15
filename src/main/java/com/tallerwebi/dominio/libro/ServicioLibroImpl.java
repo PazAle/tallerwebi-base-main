@@ -22,7 +22,7 @@ public class ServicioLibroImpl implements ServicioLibro {
 
     @Override
     public Libro getLibro(Long id) {
-        return repositorioLibro.getLibro(id);
+        return repositorioLibro.buscarLibroPorId(id);
     }
 
 

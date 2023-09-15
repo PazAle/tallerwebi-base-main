@@ -28,17 +28,22 @@ public class ServicioLibroTest {
     public void init(){
         this.servicioLibro = mock(ServicioLibro.class);
         this.repositorioLibro = mock(RepositorioLibro.class);
+
+        Libro libro = new Libro();
+        libro.setID(3L);
+
+        when(this.servicioLibro.getLibro(ID)).thenReturn(libro);
     }
 
     @Test
     public void queSePuedaObtenerUnaListaDeLibrosQueNoEsteVacia(){
 
         Set libros = new HashSet<>();
-        libros.add(new Libro(1L));
-        libros.add(new Libro(2L));
-        libros.add(new Libro(3L));
-        libros.add(new Libro(4L));
-        libros.add(new Libro(5L));
+        libros.add(new Libro());
+        libros.add(new Libro());
+        libros.add(new Libro());
+        libros.add(new Libro());
+        libros.add(new Libro());
 
         when(this.servicioLibro.getLibros()).thenReturn(libros);
 
@@ -51,11 +56,11 @@ public class ServicioLibroTest {
     public void queSePuedaObtenerUnaListaDeLibrosQueDevuelvaCincoLibros(){
 
         Set libros = new HashSet<>();
-        libros.add(new Libro(1L));
-        libros.add(new Libro(2L));
-        libros.add(new Libro(3L));
-        libros.add(new Libro(4L));
-        libros.add(new Libro(5L));
+        libros.add(new Libro());
+        libros.add(new Libro());
+        libros.add(new Libro());
+        libros.add(new Libro());
+        libros.add(new Libro());
 
         when(this.servicioLibro.getLibros()).thenReturn(libros);
 
@@ -66,9 +71,6 @@ public class ServicioLibroTest {
 
     @Test
     public void queSePuedaObtenerUnLibroPorSuId(){
-
-        when(this.servicioLibro.getLibro(ID)).thenReturn(new Libro(ID));
-
         Libro libroObtenido = servicioLibro.getLibro(ID);
 
         assertThat(libroObtenido.getID(), is(ID));

@@ -1,6 +1,6 @@
 package com.tallerwebi.dominio.comentario;
 
-import com.tallerwebi.dominio.Usuario;
+import com.tallerwebi.dominio.usuario.Usuario;
 import com.tallerwebi.dominio.libro.Libro;
 
 import java.util.Date;
