@@ -15,6 +15,8 @@ public class Libro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
     //private Autor autor;
+
+    private String nombre;
     private Double precio;
     private Date fechaLanzamiento;
     //private Categoria categoria;
@@ -24,7 +26,14 @@ public class Libro {
     private String imagen;
     private String resenia;
 
-    //private List<Comentario> comentarios;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+//private List<Comentario> comentarios;
 
     public Long getID() {
         return this.ID;

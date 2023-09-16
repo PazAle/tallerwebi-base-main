@@ -24,6 +24,8 @@ public class ServicioLibroTest {
     private ServicioLibro servicioLibro;
     private RepositorioLibro repositorioLibro;
 
+    private String nombre = "pepito";
+
     @BeforeEach
     public void init(){
         this.servicioLibro = mock(ServicioLibro.class);
@@ -31,8 +33,10 @@ public class ServicioLibroTest {
 
         Libro libro = new Libro();
         libro.setID(3L);
+        libro.setNombre(nombre);
 
         when(this.servicioLibro.getLibro(ID)).thenReturn(libro);
+        when(this.servicioLibro.getLibro(nombre)).thenReturn(libro);
     }
 
     @Test
@@ -74,6 +78,13 @@ public class ServicioLibroTest {
         Libro libroObtenido = servicioLibro.getLibro(ID);
 
         assertThat(libroObtenido.getID(), is(ID));
+    }
+
+    @Test
+    public void queSePuedaObtenerUnLibroPorSuNombre(){
+        Libro libroObtenido = servicioLibro.getLibro(nombre);
+
+        assertThat(libroObtenido.getNombre(), is(nombre));
     }
 
 

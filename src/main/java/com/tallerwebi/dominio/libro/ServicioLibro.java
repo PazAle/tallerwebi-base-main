@@ -6,4 +6,6 @@ public interface ServicioLibro {
     public Set<Libro> getLibros();
 
     public Libro getLibro(Long id);
+
+    public Libro getLibro(String nombre);
 }

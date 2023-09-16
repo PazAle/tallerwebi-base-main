@@ -25,5 +25,10 @@ public class ServicioLibroImpl implements ServicioLibro {
         return repositorioLibro.buscarLibroPorId(id);
     }
 
+    @Override
+    public Libro getLibro(String nombre) {
+        return repositorioLibro.buscarLibroPorNombre(nombre);
+    }
+
 
 }
