@@ -14,17 +14,17 @@ public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
-    private Autor autor;
+    //private Autor autor;
     private Double precio;
     private Date fechaLanzamiento;
-    private Categoria categoria;
-    private Editorial editorial;
+    //private Categoria categoria;
+    //private Editorial editorial;
     private String idioma;
     private Integer paginas;
     private String imagen;
     private String resenia;
 
-    private List<Comentario> comentarios;
+    //private List<Comentario> comentarios;
 
     public Long getID() {
         return this.ID;
@@ -32,14 +32,6 @@ public class Libro {
 
     public void setID(Long ID) {
         this.ID = ID;
-    }
-
-    public Autor getAutor() {
-        return autor;
-    }
-
-    public void setAutor(Autor autor) {
-        this.autor = autor;
     }
 
     public Double getPrecio() {
@@ -58,6 +50,7 @@ public class Libro {
         this.fechaLanzamiento = fechaLanzamiento;
     }
 
+    /*
     public Categoria getCategoria() {
         return categoria;
     }
@@ -73,6 +66,23 @@ public class Libro {
     public void setEditorial(Editorial editorial) {
         this.editorial = editorial;
     }
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+    */
 
     public String getIdioma() {
         return idioma;
@@ -104,13 +114,5 @@ public class Libro {
 
     public void setResenia(String resenia) {
         this.resenia = resenia;
-    }
-
-    public List<Comentario> getComentarios() {
-        return comentarios;
-    }
-
-    public void setComentarios(List<Comentario> comentarios) {
-        this.comentarios = comentarios;
     }
 }

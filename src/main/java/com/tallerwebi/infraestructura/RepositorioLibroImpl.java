@@ -3,17 +3,18 @@ package com.tallerwebi.infraestructura;
 import com.tallerwebi.dominio.libro.Libro;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 import java.util.HashSet;
 import java.util.Set;
 
-@Repository
-@Transactional
+@Repository("repositorioLibro")
 public class RepositorioLibroImpl implements RepositorioLibro {
     private SessionFactory sessionFactory;
 
+    @Autowired
     public RepositorioLibroImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
