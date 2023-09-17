@@ -14,13 +14,14 @@ public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
+    private String nombre;
     //private Autor autor;
     private Double precio;
     private Date fechaLanzamiento;
     //private Categoria categoria;
     //private Editorial editorial;
     private String idioma;
-    private Integer paginas;
+    private Integer cantidadPaginas;
     private String imagen;
     private String resenia;
 
@@ -32,6 +33,14 @@ public class Libro {
 
     public void setID(Long ID) {
         this.ID = ID;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public Double getPrecio() {
@@ -92,12 +101,12 @@ public class Libro {
         this.idioma = idioma;
     }
 
-    public Integer getPaginas() {
-        return paginas;
+    public Integer getCantidadPaginas() {
+        return this.cantidadPaginas;
     }
 
-    public void setPaginas(Integer paginas) {
-        this.paginas = paginas;
+    public void setCantidadPaginas(Integer paginas) {
+        this.cantidadPaginas = paginas;
     }
 
     public String getImagen() {

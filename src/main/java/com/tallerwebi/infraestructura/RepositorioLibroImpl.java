@@ -30,4 +30,15 @@ public class RepositorioLibroImpl implements RepositorioLibro {
         return (Libro) this.sessionFactory.getCurrentSession().createCriteria(Libro.class)
                 .add(Restrictions.eq("ID", id)).uniqueResult();
     }
+
+    @Override
+    public void guardar(Libro libro) {
+        this.sessionFactory.getCurrentSession().save(libro);
+    }
+
+    @Override
+    public Libro buscarLibroPorNombre(String nombre) {
+        return (Libro) sessionFactory.getCurrentSession().createCriteria(Libro.class)
+                .add(Restrictions.eq("nombre", nombre)).uniqueResult();
+    }
 }
