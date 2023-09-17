@@ -76,5 +76,4 @@ public class ServicioLibroTest {
         assertThat(libroObtenido.getID(), is(ID));
     }
 
-
 }
