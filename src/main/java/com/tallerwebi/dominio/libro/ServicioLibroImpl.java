@@ -21,8 +21,16 @@ public class ServicioLibroImpl implements ServicioLibro {
     }
 
     @Override
-    public Libro getLibro(Long id) {
-        return repositorioLibro.buscarLibroPorId(id);
+    public Libro obtenerLibroPorId(Long id) {
+        return repositorioLibro.obtenerLibroPorId(id);
+    }
+
+    public List <Libro> obtenerLibroPorNombre(String nombre){
+        return repositorioLibro.obtenerLibroPorNombre(nombre);
+    }
+
+    public boolean borrarLibro(Long id){
+        return repositorioLibro.borrarLibro(id);
     }
 
 
